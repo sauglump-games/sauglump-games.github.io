@@ -1,0 +1,13 @@
+{
+  "name": "sauglump-games.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "gh-pages -d output",
+    "build": "npx @pic0/ssg -c content -o output",
+    "start": "npx http-server output -p 0",
+    "build:watch": "npx nodemon --quiet --legacy-watch --watch content --ext '*' --exec \"bash -c 'npm run build'\""
+  },
+  "devDependencies": {
+    "gh-pages": "6.3.0"
+  }
+}
